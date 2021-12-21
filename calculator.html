@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <style>
+        .bn{
+            width: 50px;
+            height:  50px;
+            margin: 5px 10px;
+            background-color: #474749;
+            color: #ffffff;
+            border-radius: 50%;
+            font-size: 30px;
+        }
+        .bn1{
+            width: 50px;
+            height:  50px;
+            margin: 5px 10px;
+            background-color: #ff2600;
+            color: #ffffff;
+            border-radius: 50%;
+            font-size: 30px;
+    
+        }
+        .bn2{
+            width: 50px;
+            height:  50px;
+            margin: 5px 10px;
+            background-color: #ff2600;
+            color: #ffffff;
+            border-radius: 50%;
+            font-size: 20px;
+    
+        }
+
+
+    </style>
+</head>
+<body style="background-image: url(1.jpg);">
+    
+     <div style=" width: 45vh; height: 70vh; border: thick solid; text-align: center; border-radius: 10px; margin: 100px auto; background-color: #131212; box-shadow: 1px 1px 2px 2px  #f8f6f6;">
+        <div style="font-size: 30px; width:43vh ; height: 4vh; text-align: end;margin-top: 10px; color: #ffffff;"><b >Oba Adedayo</b></div>
+        <div style="margin-top: 20px;">
+            <div style="width: 41vh; height: 13vh; margin: 20px auto; border-radius: 20px; box-shadow: 0px 0px 2px; ">
+                <input type="text" id="ne" style="width: 39vh; height: 6vh;border: transparent solid ; outline: none;font-size: 20px;padding: 5px 5px; border-radius: 20px 20px 0px 0px;background-color: #ffffff;" disabled><br>     
+            <input type="text" id="ans" style="width: 39vh; height: 3vh; border: transparent solid; text-align: end; outline: none;font-size: 20px;padding: 5px 5px; border-radius: 0px 0px 20px 20px; background-color: white;"disabled>
+            </div>
+            <button class="bn2"  id="nnn" onclick="num('^')">^</button>
+            <button class="bn2"  id="xs" onclick="xs()">x <sup>2</sup></button>
+            <button class="bn2"  id="you" onclick="del()">del</button>
+            <button class="bn2"  id="you" onclick="ac()">AC</button>
+            <button class="bn"  id="you" onclick="num(7)">7</button>
+            <button class="bn"  id="you" onclick="num(8)">8</button>
+            <button class="bn"  id="you" onclick="num(9)">9</button>
+            <button class="bn1" id="you"  onclick="num('-')">-</button>
+            <button class="bn"  id="you" onclick="num(4)">4</button>
+            <button class="bn"  id="you" onclick="num(5)">5</button>
+            <button class="bn"  id="you" onclick="num(6)">6</button>
+            <button class="bn1" id="you"  onclick="num('*')">x</button>
+            <button class="bn"  id="you" onclick="num(1)">1</button>
+            <button class="bn"  id="you" onclick="num(2)">2</button>
+            <button class="bn"  id="you" onclick="num(3)">3</button>
+            <button class="bn1" id="you"  onclick="num('/')">/</button>
+            <button class="bn"  id="you" onclick="num('.')">.</button>
+            <button class="bn" id="you" onclick="num(0)">0</button>
+            <button class="bn1" id="me"  onclick="equ()">=</button>
+            <button class="bn1" id="you" onclick="num('+')">+</button>
+        </div>
+     </div>
+     <marquee behavior="" direction="right" style="background-color: blueviolet;color: #ffffff;">My Calculetor</marquee>
+
+    <script type="text/javascript">
+        function xs() {
+            ans.value = ne.value * ne.value;
+        }
+        function equ() {
+            ans.value = eval(ne.value);  
+        }
+        function del() {
+            let adedayo = ne.value;
+            ne.value = adedayo.slice(0, -1);
+        }
+        function ac() {
+            ne.value = "";
+            ans.value = "";
+        }
+        function num(uu) {
+           ne.value += uu;
+        }
+    </script>
+</body>
+</html>
